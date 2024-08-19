@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>English</title>
+  <link rel="s
+tylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Ingles</h1>
+  <p>Capítulo 11</p>
+  <p>Os advérbios em inglês (adverbs) são palavras que modificam o verbo, o adjetivo ou o advérbio.</p>
+  <p>Today (hoje), Tonight (hoje à noite), Tomorrow (amanhã), Soon (logo), Yet (ainda), Already (já), After (depois), Later (mais tarde), Lately (ultimamente), Now (agora)</p>
+  <p>here (aqui), there(lá), everywhere(em todos os lugares), outside(lá fora), inside(dentro), next door(próxima porta), upstairs(para cima), downstairs(para baixo)</p>
+  <p>Somewhat(de alguma forma), Almost(quase), Extremely(extremamente), Very(muito), Too(rambém), Enough(sulficiente), Slightly(um pouco), Quite(bastante), Totally(totalmente)</p>
+  <p><a href="index.html">Voltar para casa</a></p>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Nota Final</title>
+    <style>
+        /* Estilização básica */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            margin-bottom: 20px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Calculadora de Nota Final</h2>
+
+<form id="formNota">
+    <label for="notaProva">Nota da Prova:</label>
+    <input type="number" id="notaProva" step="0.1" min="0" max="10" required>
+
+    <label for="notaTrabalho">Nota do Trabalho:</label>
+    <input type="number" id="notaTrabalho" step="0.1" min="0" max="10" required>
+
+    <label for="notaSimulado">Nota do Simulado:</label>
+    <input type="number" id="notaSimulado" step="0.1" min="0" max="10" required>
+
+    <label for="notaAZ">Nota de AZ:</label>
+    <input type="number" id="notaAZ" step="0.1" min="0" max="10" required>
+
+    <label for="notaParticipacao">Nota de Participação:</label>
+    <input type="number" id="notaParticipacao" step="0.1" min="0" max="10" required>
+
+    <button type="submit">Calcular Nota Final</button>
+</form>
+
+<div id="resultado"></div>
+
+<script>
+    document.getElementById('formNota').addEventListener('submit', function(event) {
+        event.preventDefault(); // Previne o envio do formulário
+
+        var notaProva = parseFloat(document.getElementById('notaProva').value);
+        var notaTrabalho = parseFloat(document.getElementById('notaTrabalho').value);
+        var notaSimulado = parseFloat(document.getElementById('notaSimulado').value);
+        var notaAZ = parseFloat(document.getElementById('notaAZ').value);
+        var notaParticipacao = parseFloat(document.getElementById('notaParticipacao').value);
+
+        var notaFinal = ((notaProva * 3) + (notaTrabalho * 3) + (notaSimulado * 2) + notaAZ + notaParticipacao) / 10;
+
+        document.getElementById('resultado').innerText = 'Nota Final: ' + notaFinal.toFixed(2);
+    });
+</script>
+
+</body>
+</html>
+<p><a href="index.html">Voltar para casa</a></p>
+</body>
+</html>

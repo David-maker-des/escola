@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portuguese</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Portuguese</h1>
+  <p>Capítulo</p>
+  <p>Os artigos definidos (o, a, os, as) definem ou individualizam, de forma precisa, os substantivos, que podem ser uma pessoa, objeto ou lugar.</p>
+  <p>Os artigos indefinidos (um, uma, uns, umas) determinam de maneira vaga, indeterminada ou imprecisa, uma pessoa, objeto ou lugar ao qual não se fez menção anterior no texto.</p>
+  <p>Numerais são uma classe de palavras e apontam uma quantidade ou mesmo um lugar ocupado por um ser em uma determinada sequência.</p>
+  <p>Tipo de numerais cardinais exemplo:um, dois, cinco e entre outros.
+    Ordinais é como posições exemplo: primeiro, segundo, terceiro e entre outros.
+    Fracionários é como frações exemplo:um quarto, um quinto, um terço e entre outros.
+    Multiplicativos é como múltiplos por exemplo:dobro, triplo, quíntuplo e entre outros.
+    Numerais na construção de hipérbolos é construções com exagero por exemplo: Eu te amo mil milhões(na cena do omen de Ferro)
+  </p><!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Calculadora de Nota Final</title>
+      <style>
+          /* Estilização básica */
+          body {
+              font-family: Arial, sans-serif;
+          }
+          label {
+              display: block;
+              margin-bottom: 10px;
+          }
+          input[type="number"] {
+              margin-bottom: 20px;
+              padding: 5px;
+          }
+          button {
+              padding: 10px;
+              background-color: #007bff;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+          }
+          button:hover {
+              background-color: #0056b3;
+          }
+          #resultado {
+              margin-top: 20px;
+              font-size: 18px;
+              font-weight: bold;
+          }
+      </style>
+  </head>
+  <body>
+  
+  <h2>Calculadora de Nota Final</h2>
+  
+  <form id="formNota">
+      <label for="notaProva">Nota da Prova:</label>
+      <input type="number" id="notaProva" step="0.1" min="0" max="10" required>
+  
+      <label for="notaTrabalho">Nota do Trabalho:</label>
+      <input type="number" id="notaTrabalho" step="0.1" min="0" max="10" required>
+  
+      <label for="notaSimulado">Nota do Simulado:</label>
+      <input type="number" id="notaSimulado" step="0.1" min="0" max="10" required>
+  
+      <label for="notaAZ">Nota de AZ:</label>
+      <input type="number" id="notaAZ" step="0.1" min="0" max="10" required>
+  
+      <label for="notaParticipacao">Nota de Participação:</label>
+      <input type="number" id="notaParticipacao" step="0.1" min="0" max="10" required>
+  
+      <button type="submit">Calcular Nota Final</button>
+  </form>
+  
+  <div id="resultado"></div>
+  
+  <script>
+      document.getElementById('formNota').addEventListener('submit', function(event) {
+          event.preventDefault(); // Previne o envio do formulário
+  
+          var notaProva = parseFloat(document.getElementById('notaProva').value);
+          var notaTrabalho = parseFloat(document.getElementById('notaTrabalho').value);
+          var notaSimulado = parseFloat(document.getElementById('notaSimulado').value);
+          var notaAZ = parseFloat(document.getElementById('notaAZ').value);
+          var notaParticipacao = parseFloat(document.getElementById('notaParticipacao').value);
+  
+          var notaFinal = ((notaProva * 3) + (notaTrabalho * 3) + (notaSimulado * 2) + notaAZ + notaParticipacao) / 10;
+  
+          document.getElementById('resultado').innerText = 'Nota Final: ' + notaFinal.toFixed(2);
+      });
+  </script>
+  
+  </body>
+  </html>
+  <p><a href="index.html">Voltar para casa</a></p>
+</body>
+</html>
